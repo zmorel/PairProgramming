@@ -23,7 +23,7 @@
           type="radio"
           id="fiction"
           name="classification"
-          value="Fiction"
+          value="fiction"
         />
         Fiction
       </label>
@@ -33,7 +33,7 @@
           type="radio"
           id="non-fiction"
           name="classification"
-          value="Non-fiction"
+          value="non-fiction"
         />
         Non-Fiction
       </label>
@@ -96,7 +96,7 @@
     <p>
       <label for="aquisition">
         How did I get this book?
-        <select name="acquisition" id="aquisition" > 
+        <select name="acquisition" id="ice-cream" > 
           <option value="" selected>- Select Option -</option>
           <option value="I purchased it.">I purchased it.</option>
           <option value="It was a gift.">It was a gift.</option>
@@ -121,7 +121,7 @@
         <th>Pages</th>
         <th>Classification</th>
         <th>Details</th>
-        <th>Aquisition</th>
+        <th>Acquisition</th>
       </tr>
     </thead>
 
@@ -133,7 +133,7 @@
         <td>{{ friend.pages }}</td>
         <td>{{ friend.classification }}</td>
         <td>{{ friend.details }}</td>
-        <td>{{ friend.acquisition }}</td>
+        <td>{{ friend.aquisition }}</td>
       </tr>
       {% endfor %}
     </tbody>
