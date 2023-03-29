@@ -40,20 +40,10 @@
         Non-Fiction
       </label>
     </p>
-    <p>
-      <label for="ice-cream">
-        Favorite flavor of ice cream:
-        <select name="flavor" id="ice-cream" required>
-          <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Vanilla</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="swirl">Swirl</option>
-        </select>
-      </label>
-    </p>
 
     <fieldset>
       <legend>Details</legend>
+      <br>
       <label for="for-running">
         <input
           type="checkbox"
@@ -63,6 +53,9 @@
         />
         I own this book
       </label>
+
+      <br>
+      <br>
 
       <label for="for-biking">
         <input
@@ -74,6 +67,9 @@
         I've read this book
       </label>
 
+      <br>
+      <br>
+
       <label for="for-reading">
         <input
           type="checkbox"
@@ -81,8 +77,12 @@
           name="activities"
           value="reading"
         />
-        I liked this book
+        I liked this book        
       </label>
+
+      <br>
+      <br>
+
       <label for="for-reading">
         <input
           type="checkbox"
@@ -92,22 +92,38 @@
         />
         I would recommend this book to others
       </label>
+      <br>
     </fieldset>
 
-    <p><input type="submit" id="submit" value="Submit" /></p>
+    <p>
+      <label for="ice-cream">
+        How did I get this book?
+        <select name="flavor" id="ice-cream" required>
+          <option value="" selected>- Select Option -</option>
+          <option value="vanilla">I purchased it.</option>
+          <option value="chocolate">It was a gift.</option>
+          <option value="swirl">I checked it out from the library.</option>
+          <option value="chocolate">A friend loaned it to me.</option>
+        </select>
+      </label>
+    </p>  
+
+    <p><input type="submit" id="submit" value="Add Book" /></p>
   </form>
 
   <br /><br />
   {% if friends %}
-  <h3>Friend List</h3>
+  <h3>List of books</h3>
   <hr />
   <table border="1">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Favorite Ice Cream</th>
-        <th>Read for Fun</th>
-        <th>Favorite Activities</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Classification</th>
+        <th>Details</th>
+        <th>Aquisition</th>
       </tr>
     </thead>
 
