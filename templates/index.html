@@ -1,0 +1,250 @@
+<<<<<<< Updated upstream
+=======
+{% extends 'base.html' %} {% block body %}
+<<<<<<< HEAD
+<h2>Digital Product Management - Web Form Template</h2>
+=======
+<h2>Add a book to my library</h2>
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+<hr />
+<main>
+  <form action="/add" method="POST">
+    <p>
+<<<<<<< HEAD
+      <label for="first-name">First name:</label>
+      <input type="text" id="first-name" name="fname" />
+    </p>
+
+    <p>
+      <label for="ice-cream">
+        Favorite flavor of ice cream:
+        <select name="flavor" id="ice-cream" required>
+          <option value="" selected>Choose one ...</option>
+          <option value="vanilla">Vanilla</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="swirl">Swirl</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label>Do you read for fun?</label>
+      <label for="read-yes">
+        <input
+          type="radio"
+          id="read-yes"
+          name="read"
+          value="yes"
+          required="required"
+        />
+        Yes
+      </label>
+
+      <label for="read-no">
+        <input
+          type="radio"
+          id="read-no"
+          name="read"
+          value="no"
+          required="required"
+        />
+        No
+=======
+      <label for="Title">Title:</label>
+      <input type="text" id="Title" name="title" />
+    </p>
+    <p>
+      <label for="Author">Author:</label>
+      <input type="text" id="Author" name="author" />
+    </p>
+    <p>
+      <label for="Pages">Pages:</label>
+      <input type="text" id="Pages" name="pages" />
+    </p>
+
+    <p>
+      <label>Classification: </label>
+      <label for="fiction">
+        <input
+          type="radio"
+          id="fiction"
+          name="classification"
+          value="fiction"
+          required="required"
+        />
+        Fiction
+      </label>
+
+      <label for="non-fiction">
+        <input
+          type="radio"
+          id="non-fiction"
+          name="classification"
+          value="non-fiction"
+          required="required"
+        />
+        Non-Fiction
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+      </label>
+    </p>
+
+    <fieldset>
+<<<<<<< HEAD
+      <legend>Choose your favorite activities</legend>
+      <label for="for-running">
+        <input
+          type="checkbox"
+          id="for-running"
+          name="activities"
+          value="running"
+        />
+        Running
+      </label>
+
+      <label for="for-biking">
+        <input
+          type="checkbox"
+          id="for-biking"
+          name="activities"
+          value="biking"
+        />
+        Biking
+      </label>
+
+      <label for="for-reading">
+        <input
+          type="checkbox"
+          id="for-reading"
+          name="activities"
+          value="reading"
+        />
+        Reading
+      </label>
+    </fieldset>
+
+    <p><input type="submit" id="submit" value="Submit" /></p>
+=======
+      <legend>Details</legend>
+      <br>
+      <label for="for-own">
+        <input
+          type="checkbox"
+          id="for-own"
+          name="details"
+          value="own"
+        />
+        I own this book
+      </label>
+
+      <br>
+      <br>
+
+      <label for="for-read">
+        <input
+          type="checkbox"
+          id="for-read"
+          name="details"
+          value="read"
+        />
+        I've read this book
+      </label>
+
+      <br>
+      <br>
+
+      <label for="for-liked">
+        <input
+          type="checkbox"
+          id="for-liked"
+          name="details"
+          value="liked"
+        />
+        I liked this book        
+      </label>
+
+      <br>
+      <br>
+
+      <label for="for-recommend">
+        <input
+          type="checkbox"
+          id="for-recommend"
+          name="details"
+          value="recommend"
+        />
+        I would recommend this book to others
+      </label>
+      <br>
+    </fieldset>
+
+    <p>
+      <label for="ice-cream">
+        How did I get this book?
+        <select name="acquisition" id="ice-cream" required> 
+          <option value="" selected>- Select Option -</option>
+          <option value="I purchased it">I purchased it.</option>
+          <option value="It was a gift">It was a gift.</option>
+          <option value="I checked it out from the library">I checked it out from the library.</option>
+          <option value="A friend loaned it to me">A friend loaned it to me.</option>
+        </select>
+      </label>
+    </p> 
+
+    <p><input type="submit" id="submit" value="Add Book" /></p>
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+  </form>
+
+  <br /><br />
+  {% if friends %}
+<<<<<<< HEAD
+  <h3>Friend List</h3>
+=======
+  <h3>List of books</h3>
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+  <hr />
+  <table border="1">
+    <thead>
+      <tr>
+<<<<<<< HEAD
+        <th>Name</th>
+        <th>Favorite Ice Cream</th>
+        <th>Read for Fun</th>
+        <th>Favorite Activities</th>
+=======
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Classification</th>
+        <th>Details</th>
+        <th>Acquisition</th>
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for friend in friends %}
+      <tr>
+<<<<<<< HEAD
+        <td>{{ friend.name }}</td>
+        <td>{{ friend.flavor }}</td>
+        <td>{{ friend.read }}</td>
+        <td>{{ friend.activities }}</td>
+=======
+        <td>{{ friend.title }}</td>
+        <td>{{ friend.author }}</td>
+        <td>{{ friend.pages}}</td>
+        <td>{{ friend.classification }}</td>
+        <td>{{ friend.details }}</td>
+        <td>{{ friend.acquisition }}</td>
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</main>
+{% endblock %}
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce072ad4e47e7c3a8c507649ca849928d32e1429
+>>>>>>> Stashed changes
