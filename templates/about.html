@@ -1,6 +1,11 @@
 {% extends 'base.html' %} {% block body %}
 <main>
-<img src="thumbnail_image_123927839.jpg" alt="Picture" width="500" height="300">
-
+        <head>
+          <title>Us Completing the Assignment!</title>
+        </head>
+        <body>
+          <h1>Flask Image Example</h1>
+          <img src="{{ url_for('static', filename='picture.jpg') }}" alt="Image description" class="img-thumbnail">
+        </body>
 </main>
 {% endblock %}
