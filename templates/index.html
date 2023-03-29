@@ -23,7 +23,7 @@
           type="radio"
           id="fiction"
           name="classification"
-          value="fiction"
+          value="Fiction"
         />
         Fiction
       </label>
@@ -33,7 +33,7 @@
           type="radio"
           id="non-fiction"
           name="classification"
-          value="non-fiction"
+          value="Non-fiction"
         />
         Non-Fiction
       </label>
@@ -47,7 +47,7 @@
           type="checkbox"
           id="for-own"
           name="details"
-          value="own"
+          value="Own"
         />
         I own this book
       </label>
@@ -60,7 +60,7 @@
           type="checkbox"
           id="for-read"
           name="details"
-          value="read"
+          value="Read"
         />
         I've read this book
       </label>
@@ -73,7 +73,7 @@
           type="checkbox"
           id="for-liked"
           name="details"
-          value="liked"
+          value="Liked"
         />
         I liked this book        
       </label>
@@ -86,7 +86,7 @@
           type="checkbox"
           id="for-recommend"
           name="details"
-          value="recommend"
+          value="Recommend"
         />
         I would recommend this book to others
       </label>
@@ -94,14 +94,14 @@
     </fieldset>
 
     <p>
-      <label for="ice-cream">
+      <label for="aquisition">
         How did I get this book?
-        <select name="acquisition" id="ice-cream" > 
+        <select name="acquisition" id="aquisition" > 
           <option value="" selected>- Select Option -</option>
-          <option value="I purchased it">I purchased it.</option>
-          <option value="It was a gift">It was a gift.</option>
-          <option value="I checked it out from the library">I checked it out from the library.</option>
-          <option value="A friend loaned it to me">A friend loaned it to me.</option>
+          <option value="I purchased it.">I purchased it.</option>
+          <option value="It was a gift.">It was a gift.</option>
+          <option value="I checked it out from the library.">I checked it out from the library.</option>
+          <option value="A friend loaned it to me.">A friend loaned it to me.</option>
         </select>
       </label>
     </p> 
@@ -130,10 +130,10 @@
       <tr>
         <td>{{ friend.title }}</td>
         <td>{{ friend.author }}</td>
-        <td>{{ friend.pages}}</td>
+        <td>{{ friend.pages }}</td>
         <td>{{ friend.classification }}</td>
         <td>{{ friend.details }}</td>
-        <td>{{ friend.aquisition }}</td>
+        <td>{{ friend.acquisition }}</td>
       </tr>
       {% endfor %}
     </tbody>

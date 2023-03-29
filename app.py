@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 friends_dict = [
-    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "pages": "295", "classification": "fiction", "details": "read, recommend", "acquisition": "library"}
+    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "pages": "295", "classification": "Fiction", "details": "Recommend, Read", "acquisition": "It was a gift."}
 ]
 
 
@@ -44,9 +44,7 @@ def add():
             "details": details_string, 
             "classification": classification,
             "acquisition": acquisition
-           ,
-
-        }
+            }
 
         print(friend_dict)
         friends_dict.append(
