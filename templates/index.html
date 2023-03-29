@@ -4,38 +4,36 @@
 <main>
   <form action="/add" method="POST">
     <p>
-      <label for="Author">Title:</label>
-      <input type="text" id="first-name" name="fname" />
+      <label for="Title">Title:</label>
+      <input type="text" id="Title" name="title" />
     </p>
     <p>
       <label for="Author">Author:</label>
-      <input type="text" id="first-name" name="fname" />
+      <input type="text" id="Author" name="author" />
     </p>
     <p>
-      <label for="Author">Pages:</label>
-      <input type="text" id="first-name" name="fname" />
+      <label for="Pages">Pages:</label>
+      <input type="text" id="Pages" name="pages" />
     </p>
 
     <p>
       <label>Classification: </label>
-      <label for="read-yes">
+      <label for="fiction">
         <input
           type="radio"
-          id="read-yes"
-          name="read"
-          value="yes"
-          required="required"
+          id="fiction"
+          name="classification"
+          value="fiction"
         />
         Fiction
       </label>
 
-      <label for="read-no">
+      <label for="non-fiction">
         <input
           type="radio"
-          id="read-no"
-          name="read"
-          value="no"
-          required="required"
+          id="non-fiction"
+          name="classification"
+          value="non-fiction"
         />
         Non-Fiction
       </label>
@@ -44,12 +42,12 @@
     <fieldset>
       <legend>Details</legend>
       <br>
-      <label for="for-running">
+      <label for="for-own">
         <input
           type="checkbox"
-          id="for-running"
-          name="activities"
-          value="running"
+          id="for-own"
+          name="details"
+          value="own"
         />
         I own this book
       </label>
@@ -57,12 +55,12 @@
       <br>
       <br>
 
-      <label for="for-biking">
+      <label for="for-read">
         <input
           type="checkbox"
-          id="for-biking"
-          name="activities"
-          value="biking"
+          id="for-read"
+          name="details"
+          value="read"
         />
         I've read this book
       </label>
@@ -70,12 +68,12 @@
       <br>
       <br>
 
-      <label for="for-reading">
+      <label for="for-liked">
         <input
           type="checkbox"
-          id="for-reading"
-          name="activities"
-          value="reading"
+          id="for-liked"
+          name="details"
+          value="liked"
         />
         I liked this book        
       </label>
@@ -83,12 +81,12 @@
       <br>
       <br>
 
-      <label for="for-reading">
+      <label for="for-recommend">
         <input
           type="checkbox"
-          id="for-reading"
-          name="activities"
-          value="reading"
+          id="for-recommend"
+          name="details"
+          value="recommend"
         />
         I would recommend this book to others
       </label>
@@ -98,12 +96,12 @@
     <p>
       <label for="ice-cream">
         How did I get this book?
-        <select name="flavor" id="ice-cream" required>
+        <select name="acquisition" id="ice-cream" > 
           <option value="" selected>- Select Option -</option>
-          <option value="vanilla">I purchased it.</option>
-          <option value="chocolate">It was a gift.</option>
-          <option value="swirl">I checked it out from the library.</option>
-          <option value="chocolate">A friend loaned it to me.</option>
+          <option value="I purchased it">I purchased it.</option>
+          <option value="It was a gift">It was a gift.</option>
+          <option value="I checked it out from the library">I checked it out from the library.</option>
+          <option value="A friend loaned it to me">A friend loaned it to me.</option>
         </select>
       </label>
     </p> 
@@ -130,10 +128,12 @@
     <tbody>
       {% for friend in friends %}
       <tr>
-        <td>{{ friend.name }}</td>
-        <td>{{ friend.flavor }}</td>
-        <td>{{ friend.read }}</td>
-        <td>{{ friend.activities }}</td>
+        <td>{{ friend.title }}</td>
+        <td>{{ friend.author }}</td>
+        <td>{{ friend.pages}}</td>
+        <td>{{ friend.classification }}</td>
+        <td>{{ friend.details }}</td>
+        <td>{{ friend.aquisition }}</td>
       </tr>
       {% endfor %}
     </tbody>
@@ -141,3 +141,4 @@
   {% endif %}
 </main>
 {% endblock %}
+
