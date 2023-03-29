@@ -17,18 +17,7 @@
     </p>
 
     <p>
-      <label for="ice-cream">
-        Favorite flavor of ice cream:
-        <select name="flavor" id="ice-cream" required>
-          <option value="" selected>Choose one ...</option>
-          <option value="vanilla">Vanilla</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="swirl">Swirl</option>
-        </select>
-      </label>
-    </p>
-    <p>
-      <label>Do you read for fun?</label>
+      <label>Classification: </label>
       <label for="read-yes">
         <input
           type="radio"
@@ -37,7 +26,7 @@
           value="yes"
           required="required"
         />
-        Yes
+        Fiction
       </label>
 
       <label for="read-no">
@@ -48,12 +37,23 @@
           value="no"
           required="required"
         />
-        No
+        Non-Fiction
+      </label>
+    </p>
+    <p>
+      <label for="ice-cream">
+        Favorite flavor of ice cream:
+        <select name="flavor" id="ice-cream" required>
+          <option value="" selected>Choose one ...</option>
+          <option value="vanilla">Vanilla</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="swirl">Swirl</option>
+        </select>
       </label>
     </p>
 
     <fieldset>
-      <legend>Choose your favorite activities</legend>
+      <legend>Details</legend>
       <label for="for-running">
         <input
           type="checkbox"
@@ -61,7 +61,7 @@
           name="activities"
           value="running"
         />
-        Running
+        I own this book
       </label>
 
       <label for="for-biking">
@@ -71,7 +71,7 @@
           name="activities"
           value="biking"
         />
-        Biking
+        I've read this book
       </label>
 
       <label for="for-reading">
@@ -81,7 +81,16 @@
           name="activities"
           value="reading"
         />
-        Reading
+        I liked this book
+      </label>
+      <label for="for-reading">
+        <input
+          type="checkbox"
+          id="for-reading"
+          name="activities"
+          value="reading"
+        />
+        I would recommend this book to others
       </label>
     </fieldset>
 
