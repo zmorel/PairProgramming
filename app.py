@@ -6,6 +6,11 @@ friends_dict = [
     {"title": "The Hobbit", "author": "J.R.R. Tolkien", "pages": "295", "classification": "Fiction", "details": "Recommend, Read", "acquisition": "It was a gift."}
 ]
 
+# Handling error 404 and displaying relevant web page
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template("404.html"), 404
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -63,4 +68,6 @@ def about():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True
+            )
+    
