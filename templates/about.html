@@ -1,11 +1,31 @@
-{% extends 'base.html' %} {% block body %}
+{% extends 'base.html' %}
+
+{% block body %}
 <main>
-        <head>
-          <title>Picture</title>
-        </head>
-        <body>
-          <h1>Zach and Mason</h1>
-          <img src="{{ url_for('static', filename='picture.jpg') }}" alt="Image description" class="img-thumbnail">
-        </body>
+  <head>
+    <title>Picture</title>
+  </head>
+  <body>
+    <h1>Zach and Mason</h1>
+    <img src="{{ url_for('static', filename='picture.jpg') }}" alt="Image description" class="img-thumbnail">
+  </body>
 </main>
+
+<!-- Flash message -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-{{ messages[0]['category'] }} alert-dismissible fade show" role="alert" id="flash-message">
+      {{ messages[0]['message'] }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endif %}
+{% endwith %}
+
+<!-- JavaScript for disappearing flash message after 4 seconds -->
+<script>
+  setTimeout(function() {
+    document.getElementById('flash-message').style.display = 'none';
+  }, 4000);
+</script>
+
 {% endblock %}
