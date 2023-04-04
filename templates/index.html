@@ -1,112 +1,124 @@
-{% extends 'base.html' %} {% block body %}
-<h2>Add a book to my library</h2>
+{% extends 'base.html' %}
+{% block body %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Library</title>
+<h2 class="text-primary">Add a book to my library</h2>
 <hr />
 <main>
   <form action="/add" method="POST">
     <p>
-      <label for="Title">Title:</label>
-      <input type="text" id="Title" name="title" />
+      <label for="Title" class="form-label">Title:</label>
+      <input type="text" id="Title" name="title" class="form-control" />
     </p>
     <p>
-      <label for="Author">Author:</label>
-      <input type="text" id="Author" name="author" />
+      <label for="Author" class="form-label">Author:</label>
+      <input type="text" id="Author" name="author" class="form-control" />
     </p>
     <p>
-      <label for="Pages">Pages:</label>
-      <input type="text" id="Pages" name="pages" />
+      <label for="Pages" class="form-label">Pages:</label>
+      <input type="text" id="Pages" name="pages" class="form-control" />
     </p>
 
     <p>
-      <label>Classification: </label>
-      <label for="fiction">
+      <label class="form-label">Classification: </label>
+      <div class="form-check" >
         <input
           type="radio"
           id="fiction"
           name="classification"
           value="fiction"
+          class="form-check-input"
+          required
         />
-        Fiction
-      </label>
+        <label for="fiction" class="form-check-label">Fiction</label>
+      </div>
 
-      <label for="non-fiction">
+      <div class="form-check">
         <input
           type="radio"
           id="non-fiction"
           name="classification"
           value="non-fiction"
+          class="form-check-input"
         />
-        Non-Fiction
-      </label>
+        <label for="non-fiction" class="form-check-label">Non-Fiction</label>
+      </div>
     </p>
 
     <fieldset>
-      <legend>Details</legend>
+      <legend class="mt-3">Details</legend>
       <br>
-      <label for="for-own">
+      <div class="form-check">
         <input
           type="checkbox"
           id="for-own"
           name="details"
           value="Own"
+          class="form-check-input"
         />
-        I own this book
-      </label>
+        <label for="for-own" class="form-check-label">I own this book</label>
+      </div>
 
       <br>
       <br>
 
-      <label for="for-read">
+      <div class="form-check">
         <input
           type="checkbox"
           id="for-read"
           name="details"
           value="Read"
+          class="form-check-input"
         />
-        I've read this book
-      </label>
+        <label for="for-read" class="form-check-label">I've read this book</label>
+      </div>
 
       <br>
       <br>
 
-      <label for="for-liked">
+      <div class="form-check">
         <input
           type="checkbox"
           id="for-liked"
           name="details"
           value="Liked"
+          class="form-check-input"
         />
-        I liked this book        
-      </label>
+        <label for="for-liked" class="form-check-label">I liked this book</label>
+      </div>
 
       <br>
       <br>
 
-      <label for="for-recommend">
+      <div class="form-check">
         <input
           type="checkbox"
           id="for-recommend"
           name="details"
           value="Recommend"
+          class="form-check-input"
         />
-        I would recommend this book to others
-      </label>
+        <label for="for-recommend" class="form-check-label">I would recommend this book to others</label>
+      </div>
       <br>
     </fieldset>
 
     <p>
-      <label for="acquisition">
-        How did I get this book?
-        <select name="acquisition" id="ice-cream" > 
-          <option value="" selected>- Select Option -</option>
-          <option value="I purchased it.">I purchased it.</option>
-          <option value="It was a gift.">It was a gift.</option>
-          <option value="I checked it out from the library.">I checked it out from the library.</option>
-          <option value="A friend loaned it to me.">A friend loaned it to me.</option>
-        </select>
-      </label>
-    </p> 
+      <label for="acquisition" class="form-label">How did I get this book?</label>
+      <select name="acquisition" id="acquisition" class="form-select" required>
+        <option value="" selected>- Select Option -</option>
+        <option value="I purchased it.">I purchased it.</option>
+        <option value="It was a gift.">It was a gift.</option>
+        <option value="I checked it out from the library.">I checked it out from the library.</option>
+        <option value="A friend loaned it to me.">A friend loaned it to me.</option>
+      </select>
+    </p>
 
-    <p><input type="submit" id="submit" value="Add Book" /></p>
+    <p><input type="submit" id="submit" value="Add Book" class="btn btn-primary" /></p>
+
+
   </form>
 
   <br /><br />
