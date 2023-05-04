@@ -1,10 +1,9 @@
 # Flask Web Form Template
 
-#Library of Books
 
 I completed this project as a part of Digital Product Management to learn about dynamic web applications. This project was useful to understand how to complete a webpage with another person also assisting from another machine. It was interesting to see how commits on both ends would affect the website and how it looks. There were definately some issues in the beginning with commiting the wrong elements or adding the wrong files into the repository which made the project go slightly longer than expected. 
 
----
+Here are some specific instructions we followed in order to get the environment working:
 
 1. Clone this repository to local computer
 
