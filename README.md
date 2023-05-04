@@ -2,7 +2,7 @@
 
 #Library of Books
 
-I completed this project as a part of Digital Product Management to learn about dynamic web applications.
+I completed this project as a part of Digital Product Management to learn about dynamic web applications. This project was useful to understand how to complete a webpage with another person also assisting from another machine. It was interesting to see how commits on both ends would affect the website and how it looks. There were definately some issues in the beginning with commiting the wrong elements or adding the wrong files into the repository which made the project go slightly longer than expected. 
 
 ---
 
@@ -27,16 +27,16 @@ I completed this project as a part of Digital Product Management to learn about 
 
 6. Test the application by visiting it in your web browser
 
-### TO-DO
-
+### Steps completed
+Here are the steps we took in order to complete the assignment. In order to make sure our page was fully functional and completed all of the directions, we made sure to check off the boxes as we completed them!
 
 
 - [x] Catch all selected activities in /add and put them into the python dictionary
 - [x] Create a confirmation page before submitting
 - [x] Submit records to database
-- [ ] Delete a record
-- [ ] Update a record
-- [ ] Styling bootstrap framework
-- [ ] Custom error messages
+- [x] Delete a record
+- [x] Update a record
+- [x] Styling bootstrap framework
+- [x] Custom error messages
 
 
